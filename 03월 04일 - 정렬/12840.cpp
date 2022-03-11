@@ -19,9 +19,6 @@ int main(void){
 		if (t==1){
 			cin >> c;
 			now = (now+c)%86400;
-			h = now/3600;
-			m = (now%3600)/60;
-			s = (now%3600)%60;
 		}
 		else if (t==2){
 			cin >> c;
@@ -29,11 +26,11 @@ int main(void){
 			if (now<0){
 				now += 86400;
 			}
+		}
+		else{ // t==3
 			h = now/3600;
 			m = (now%3600)/60;
 			s = (now%3600)%60;
-		}
-		else{ // t==3
 			cout << h << " " << m << " " << s << "\n";
 		}
 	}
