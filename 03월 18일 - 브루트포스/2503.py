@@ -4,7 +4,8 @@
 n=int(input())
 questions=[]
 for i in range(n):
-    questions.append(list(map(str, input().split())))
+    questions.append(input().split()) # p2. 파이썬 input받은 애는 기본적으로 str 
+    #questions.append(list(map(str, input().split())))
 
 # 내가 해보려고 했던 방법: lambda 이용해서 스트라이크 많은 순서로 정렬해서
 # 예를 들면 32_에서 7, 1, 5, 6.. 지워나가면서 검사.. 근데 구현 막막했음
