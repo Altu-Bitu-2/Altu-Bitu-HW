@@ -4,10 +4,12 @@
 
 A,B = map(str, input().split())
 
-if len(B)>len(A): # 항상 A가 더 길게 
-    swap=A
-    A=B
-    B=swap
+if len(B)>len(A): # 항상 A가 더 길게
+    A, B = B, A
+    # p2. 파이썬은 swap할 때 중간 임시변수 필요 없음! 
+    #swap=A
+    #A=B
+    #B=swap
     
 a_length = len(A)
 b_length = len(B)
