@@ -21,25 +21,10 @@ for i in range(n):
 for i in range(len(data)):
     data[i][0]=data[i][0][-1] # 일의 자리 수만 추출 
     k=data[i][0]
-    if k=="1" or k=="5" or k=="6":
-        print(k)
-    elif k=="2":
-        temp=["2","4","8","6"]
+    if k!="0":
+        temp=[]
+        for j in range(1,5):
+            temp.append(str(pow(int(k),j))[-1])
         print(temp[int(data[i][1])%4-1])
-    elif k=="3":
-        temp=["3","9","7","1"]
-        print(temp[int(data[i][1])%4-1])
-    elif k=="7":
-        temp=["7","9","3","1"]
-        print(temp[int(data[i][1])%4-1])
-    elif k=="8":
-        temp=["8","4","2","6"]
-        print(temp[int(data[i][1])%4-1])
-    elif k=="4":
-        temp=["4","6"]
-        print(temp[int(data[i][1])%2-1])
-    elif k=="9":
-        temp=["9","1"]
-        print(temp[int(data[i][1])%2-1])
-    elif k=="0":
+    else:
         print("10")
